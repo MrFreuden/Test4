@@ -17,6 +17,8 @@ jobs:
         run: |
           VERSION=$(grep -oE 'Version: (.*)$' Test4/Test4.csproj | cut -d':' -f2 | tr -d '[:space:]')
           echo "VERSION=$VERSION"
+        outputs:
+          version: ${{ steps.get-version.outputs.VERSION }}
 
       - name: Install .NET
         uses: actions/setup-dotnet@v4
