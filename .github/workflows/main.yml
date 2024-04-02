@@ -15,7 +15,7 @@ jobs:
         id: get-version
         shell: bash
         run: |
-            VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" Test4/Test4.csproj)
+            VERSION=$(awk -F'[<>]' '/<Version>/{print $3}' Test4/Test4.csproj)
             echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Install .NET
