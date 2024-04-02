@@ -15,7 +15,7 @@ jobs:
         id: get-version
         shell: bash
         run: |
-    $version = (Get-Content Test4/Test4.csproj | Select-String -Pattern '<Version>(.*?)<\/Version>').Matches.Groups[1].Value
+    $version = Select-String -Path Test4/Test4.csproj -Pattern '<Version>(.*?)<\/Version>' | ForEach-Object { $_.Matches.Groups[1].Value }
     echo "version=$version" >> $GITHUB_ENV
 
       - name: Install .NET
