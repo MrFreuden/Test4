@@ -30,6 +30,7 @@ jobs:
         run: dotnet publish Test4/Test4.csproj -c Release -o pub -r win-x64 --self-contained true
 
       - name: Check if TOKEN_TEST4 is set
+        shell: bash
         run: if [ -z "${TOKEN_TEST4}" ]; then echo "TOKEN_TEST4 is not set"; else echo "TOKEN_TEST4 is set"; fi
 
       - name: Create Velopack Release
