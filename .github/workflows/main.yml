@@ -15,10 +15,10 @@ jobs:
         id: get-version
         shell: bash
         run: |
-          VERSION=$(grep -oE 'Version: (.*)$' Test4/Test4.csproj | cut -d':' -f2 | tr -d '[:space:]')
-          echo "VERSION=$VERSION"
-        **outputs:**  # This line should be indented one level further
-          version: ${{ steps.get-version.outputs.VERSION }}
+            VERSION=$(grep -oE 'Version: (.*)$' Test4/Test4.csproj | cut -d':' -f2 | tr -d '[:space:]')
+            echo "VERSION=$VERSION"
+        outputs: # This line is indented one level further
+        version: ${{ steps.get-version.outputs.VERSION }}
 
       - name: Install .NET
         uses: actions/setup-dotnet@v4
