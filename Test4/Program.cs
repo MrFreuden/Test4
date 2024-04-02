@@ -9,7 +9,7 @@ namespace Test4
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static async void Main()
+        static async Task Main()
         {
             await UpdateMyApp();
             VelopackApp.Build().Run();
