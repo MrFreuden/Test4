@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Test4/1.0.0": {
+        "dependencies": {
+          "Velopack": "0.0.359"
+        },
+        "runtime": {
+          "Test4.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "NuGet.Versioning/6.9.1": {
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Versioning.dll": {
+            "assemblyVersion": "6.9.1.3",
+            "fileVersion": "6.9.1.3"
+          }
+        }
+      },
+      "Velopack/0.0.359": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "NuGet.Versioning": "6.9.1"
+        },
+        "runtime": {
+          "lib/net6.0/Velopack.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.359.62308"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Test4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+    },
+    "NuGet.Versioning/6.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ypnSvEtpNGo48bAWn95J1oHChycCXcevFSbn53fqzLxlXFSZP7dawu8p/7mHAfGufZQSV2sBpW80XQGIfXO8kQ==",
+      "path": "nuget.versioning/6.9.1",
+      "hashPath": "nuget.versioning.6.9.1.nupkg.sha512"
+    },
+    "Velopack/0.0.359": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UezXo8WNBC8AMrnkuQ1KeYmlkg829Th1p1+pi+HAPXmbd1XX5chlgHj69P2cLqdhhbfCL7sVdfFbKHp2UbBsJg==",
+      "path": "velopack/0.0.359",
+      "hashPath": "velopack.0.0.359.nupkg.sha512"
+    }
+  }
+}
