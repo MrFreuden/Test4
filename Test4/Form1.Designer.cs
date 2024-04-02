@@ -48,6 +48,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            Load += this.Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
