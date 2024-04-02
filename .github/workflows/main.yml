@@ -6,6 +6,7 @@ on:
       - master
 env:
   TOKEN_TEST4: ${{ secrets.TOKEN_TEST4 }}
+
 jobs:
   deploy-to-github-releases:
     runs-on: windows-latest
@@ -27,6 +28,9 @@ jobs:
 
       - name: Publish Application
         run: dotnet publish Test4/Test4.csproj -c Release -o pub -r win-x64 --self-contained true
+
+      - name: Check if TOKEN_TEST4 is set
+        run: if [ -z "${TOKEN_TEST4}" ]; then echo "TOKEN_TEST4 is not set"; else echo "TOKEN_TEST4 is set"; fi
 
       - name: Create Velopack Release
         run: |
