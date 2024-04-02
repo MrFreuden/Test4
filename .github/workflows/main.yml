@@ -28,5 +28,5 @@ jobs:
         run: |
           dotnet tool install -g vpk
           vpk download github --repoUrl https://github.com/MrFreuden/Test4
-          vpk pack -u HekTest4 -v ${{ env.VERSION }} -p publish
+          vpk pack -u HekTest4 -v ${{ env.VERSION }} -p pub
           vpk upload github --repoUrl https://github.com/MrFreuden/Test4 --publish --releaseName "Test4 ${{ env.VERSION }}" --tag v${{ env.VERSION }}
