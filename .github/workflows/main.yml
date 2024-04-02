@@ -1,0 +1,32 @@
+name: Deploy to GitHub Releases
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-to-github-releases:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get Version from Project File
+        id: get-version
+        shell: bash
+        run: echo "version=$(grep -oE '<Version>[^<]+' Test4/Test4.csproj | sed 's/<Version>//')" >> $GITHUB_ENV
+
+      - name: Install .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Publish Application
+        run: dotnet publish Test4/Test4.csproj -c Release -o pub -r win-x64 --self-contained true
+
+      - name: Create Velopack Release
+        run: |
+          dotnet tool install -g vpk
+          vpk download github --repoUrl https://github.com/MrFreuden/Test4
+          vpk pack -u HekTest4 -v ${{ env.VERSION }} -p publish
+          vpk upload github --repoUrl https://github.com/MrFreuden/Test4 --publish --releaseName "Test4 ${{ env.VERSION }}" --tag v${{ env.VERSION }}
