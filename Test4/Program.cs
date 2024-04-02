@@ -18,7 +18,8 @@ namespace Test4
 
         private static async Task UpdateMyApp()
         {
-            var mgr = new UpdateManager(new GithubSource("https://github.com/MrFreuden/Test4", null, false));
+            var token = Environment.GetEnvironmentVariable("TOKEN_TEST4");
+            var mgr = new UpdateManager(new GithubSource("https://github.com/MrFreuden/Test4", token, false));
 
             // check for new version
             var newVersion = await mgr.CheckForUpdatesAsync();
