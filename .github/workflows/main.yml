@@ -15,8 +15,8 @@ jobs:
         id: get-version
         shell: bash
         run: |
-            VERSION=$(grep -oE 'Version: (.*)$' Test4/Test4.csproj | cut -d':' -f2 | tr -d '[:space:]')
-            echo "VERSION=$VERSION"
+            VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" Test4/Test4.csproj)
+            echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Install .NET
         uses: actions/setup-dotnet@v4
