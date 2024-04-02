@@ -11,8 +11,8 @@ namespace Test4
         [STAThread]
         static async Task Main()
         {
-            await UpdateMyApp();
             VelopackApp.Build().Run();
+            await UpdateMyApp();
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
