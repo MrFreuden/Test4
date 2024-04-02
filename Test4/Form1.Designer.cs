@@ -34,7 +34,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(348, 217);
+            label1.Location = new Point(360, 142);
             label1.Name = "label1";
             label1.Size = new Size(56, 20);
             label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
-            Load += this.Form1_Load;
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
