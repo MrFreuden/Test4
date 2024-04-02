@@ -32,3 +32,5 @@ jobs:
           vpk download github --repoUrl https://github.com/MrFreuden/Test4
           vpk pack --packId HekTest4 --packVersion ${{ env.VERSION }} --packDir pub --mainExe Test4.exe
           vpk upload github --repoUrl https://github.com/MrFreuden/Test4 --publish --releaseName "Test4 ${{ env.VERSION }}" --tag v${{ env.VERSION }}
+        env:
+          TOKEN_TEST4: ${{ secrets.TOKEN_TEST4 }}
