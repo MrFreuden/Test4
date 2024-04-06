@@ -34,11 +34,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(651, 146);
+            label1.Location = new Point(307, 168);
             label1.Name = "label1";
-            label1.Size = new Size(56, 20);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 0;
-            label1.Text = "test1)))";
+            label1.Text = "TEST2";
+            label1.Click += label1_Click;
             // 
             // Form1
             // 

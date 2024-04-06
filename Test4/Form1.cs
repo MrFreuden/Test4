@@ -45,6 +45,11 @@ namespace Test4
 
             var ourExePath = VelopackRuntimeInfo.EntryExePath;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     class FileLogger : ILogger
